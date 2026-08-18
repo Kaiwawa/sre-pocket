@@ -13,7 +13,7 @@ jobs:
         working-directory: ./Terraform
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7.0.1
       - uses: hashicorp/setup-terraform@v4
         with:
           cli_config_credentials_token: ${{ secrets.TERRAFORM_API_TOKEN }}
@@ -35,8 +35,9 @@ jobs:
           PLAN_STDERR: ${{ steps.plan.outputs.stderr }}
           PLAN_EXITCODE: ${{ steps.plan.outputs.exitcode }}
         run: |
-          echo "Exit Code: $PLAN_EXITCODE"
-          echo "=== STDOUT ==="
-          echo "$PLAN_STDOUT"
-          echo "=== STDERR ==="
-          echo "$PLAN_STDERR"
+          echo "## Summary"
+          echo "Exit Code: $PLAN_EXITCODE" >> $GITHUB_STEP_SUMMARY
+          echo "=== STDOUT ===" >> $GITHUB_STEP_SUMMARY
+          echo "$PLAN_STDOUT" >> $GITHUB_STEP_SUMMARY
+          echo "=== STDERR ===" >> $GITHUB_STEP_SUMMARY
+          echo "$PLAN_STDERR" >> $GITHUB_STEP_SUMMARY
