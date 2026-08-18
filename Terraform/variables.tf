@@ -7,3 +7,7 @@ variable "region" {
 }
 
 variable "allowed_ip" {}
+
+variable "user_ocid" {}
+
+variable "fingerprint" {}
