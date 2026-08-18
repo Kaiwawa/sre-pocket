@@ -3,7 +3,7 @@ name: Terraform
 on:
   push:
     paths:
-      - "Terraform/*"
+      - 'Terraform/**'
     # branches: ["main"]
 
 env:
