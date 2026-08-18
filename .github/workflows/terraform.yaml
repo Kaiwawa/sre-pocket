@@ -20,7 +20,8 @@ jobs:
         with:
           terraform_version: "1.15.8"
           cli_config_credentials_token: ${{ secrets.TERRAFORM_API_TOKEN }}
-
+      
+      - run: cd Terraform
       - run: terraform init
 
       - id: plan
