@@ -1,11 +1,7 @@
-variable "tenancy_ocid" {
-}
+variable "tenancy_ocid" {}
 
-variable "compartment_id" {
-}
+variable "compartment_id" {}
 
-variable "region" {
-}
+variable "region" {}
 
-variable "allowed_ip" {
-}
+variable "allowed_ip" {}

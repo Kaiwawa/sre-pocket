@@ -2,3 +2,4 @@
 Terraform/.terraform
 Terraform/.terraform/*
 Terraform/.terraform.lock.hcl
+.github/workflows/ansible.yaml

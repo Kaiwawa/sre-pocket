@@ -1,9 +1,0 @@
-# name: Ansible
-
-# on:
-#     push:
-#         branches: ["main"]
-
-# jobs:
-#     update:
-#         runs-on: ubuntu-latest
